@@ -1,3 +1,20 @@
+Tunes-The Shopping website is an e-commerce website that has various guitars as the product to be sold and purchased by customers. This project is a full-stack project developed using MERN Stack. The server side code is written using ExpressJS Framework. MongoDB is used to store the required data, retreive it and modify it as per user operations. The following Models are created on MongoDB:- 
+
+-> User model to store User data like firstname, lastname, email, password, user cart containing items, purchase history and user role(general user or admin) that has rules for each field
+-> Product model to store product details like Model, Brand name, Price, details of images of products etc that has rules for each field 
+-> Brand model that stores various brand names that has rules for each field.
+-> Site Vars model that stores details like address, office timings, contact no. etc. for the organistion and has rules for each field.
+
+Various routes are created that creates end-points to perform various operations, being it registering new user, signing in previous user, adding, updating and deleting of previous products, and updating user details.
+
+Nodemailer and Mailgen are used in order to generate a mail for authenticating user email address, whenever the user registers, or updates the email address. The link sent via mail is used to authenticate the mail and update the change on database.
+
+The password is encrypted using bcrypt library, so that encrypted password that has salt is stored on database, and the same is retreived and verified when signing in.
+
+josnwebtoken is used to generate a token and store it as a cookie when the user sign in.
+
+Site vars like address, office timings, contact no. etc. can also be added and updated using the routes created for the same.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
